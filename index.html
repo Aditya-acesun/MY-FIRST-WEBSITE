@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Done - Professional Assignment Writing Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f8961e;
+            --danger: #e63946;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            background-color: white;
+            color: var(--primary);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .auth-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .auth-btn:hover {
+            background-color: #d63384;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(58, 12, 163, 0.9)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(248, 37, 133, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #d63384;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(248, 37, 133, 0.4);
+        }
+        
+        /* Pricing Calculator */
+        .calculator {
+            background-color: white;
+            padding: 4rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        .section-title h2 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .calculator-form {
+            background-color: var(--light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        .urgency-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .urgency-option {
+            flex: 1;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .urgency-option.selected {
+            border-color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .urgency-option h4 {
+            margin-bottom: 0.3rem;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+        
+        .urgency-option .price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .pages-input {
+            display: flex;
+            align-items: center;
+        }
+        
+        .pages-input button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            border-radius: 6px 0 0 6px;
+            transition: background-color 0.3s;
+        }
+        
+        .pages-input button:hover {
+            background-color: var(--secondary);
+        }
+        
+        .pages-input input {
+            flex: 1;
+            text-align: center;
+            border-radius: 0;
+        }
+        
+        .pages-input button:last-of-type {
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .location-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .location-option {
+            text-align: center;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .location-option.selected {
+            border-color: var(--accent);
+            background-color: rgba(248, 37, 133, 0.1);
+        }
+        
+        .additional-services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .service-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .calculator-result {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .result-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .order-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+        
+        .order-btn:hover {
+            background-color: #d63384;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 2.2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-card i {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.4rem;
+        }
+        
+        /* Login/Register Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #999;
+            cursor: pointer;
+        }
+        
+        .modal-tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-tab {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #777;
+            cursor: pointer;
+            transition: color 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .modal-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .modal h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            padding: 3rem 0;
+            background-color: white;
+        }
+        
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .user-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .user-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .user-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background-color: rgba(76, 201, 240, 0.2);
+            color: #0a9396;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--success);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            margin-bottom: 0.8rem;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--success);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .calculator-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .location-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                width: 100%;
+                display: none;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .urgency-options {
+                flex-direction: column;
+            }
+            
+            .additional-services {
+                grid-template-columns: 1fr;
+            }
+            
+            .location-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">AD</div>
+                <div class="logo-text">
+                    <h1>Assignment Done</h1>
+                    <p>Professional Assignment Solutions</p>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#admin" id="adminLink" style="display:none;">Admin</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <div class="user-avatar" id="userAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <button class="auth-btn" id="loginBtn">Login / Register</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Your Assignments, Done Right!</h2>
+            <p>Get high-quality assignments written by subject experts. Choose your delivery timeline and location. Standard rate ₹8/page, urgent delivery ₹16/page. Register now and experience academic excellence!</p>
+            <a href="#calculator" class="cta-button">Calculate Your Order</a>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Assignment Price Calculator</h2>
+                <p>Customize your assignment order with urgency, location, and additional services</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Assignment Type</label>
+                        <select id="assignmentType">
+                            <option value="essay">Essay/General Writing</option>
+                            <option value="technical">Technical/Engineering</option>
+                            <option value="programming">Programming/Coding</option>
+                            <option value="research">Research Paper</option>
+                            <option value="case-study">Case Study</option>
+                            <option value="dissertation">Dissertation/Thesis</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Delivery Urgency</label>
+                        <div class="urgency-options">
+                            <div class="urgency-option" data-days="7" data-multiplier="1">
+                                <h4>7 Days</h4>
+                                <p class="price">₹8/page</p>
+                                <p>Standard</p>
+                            </div>
+                            <div class="urgency-option" data-days="3" data-multiplier="1.2">
+                                <h4>3 Days</h4>
+                                <p class="price">₹10/page</p>
+                                <p>Fast</p>
+                            </div>
+                            <div class="urgency-option selected" data-days="1" data-multiplier="2">
+                                <h4>24 Hours</h4>
+                                <p class="price">₹16/page</p>
+                                <p>Urgent</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Delivery Location</label>
+                        <div class="location-options">
+                            <div class="location-option" data-location="mumbai">
+                                Mumbai
+                            </div>
+                            <div class="location-option selected" data-location="navi-mumbai">
+                                Navi Mumbai
+                            </div>
+                            <div class="location-option" data-location="thane">
+                                Thane
+                            </div>
+                            <div class="location-option" data-location="mumbai-local">
+                                Mumbai Local Areas
+                            </div>
+                            <div class="location-option" data-location="thane-local">
+                                Thane Local Areas
+                            </div>
+                            <div class="location-option" data-location="other">
+                                Other Location
+                            </div>
+                        </div>
+                        <div id="otherLocationContainer" style="display:none; margin-top:1rem;">
+                            <input type="text" id="otherLocation" placeholder="Enter your location">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Number of Pages</label>
+                        <div class="pages-input">
+                            <button id="decreasePages">-</button>
+                            <input type="number" id="pagesCount" min="1" value="5">
+                            <button id="increasePages">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Requirements</label>
+                        <div class="additional-services">
+                            <div class="service-option">
+                                <input type="checkbox" id="references" name="references">
+                                <label for="references">References/Bibliography (+₹50)</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="plagiarism" name="plagiarism">
+                                <label for="plagiarism">Plagiarism Report (+₹100)</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="formatting" name="formatting">
+                                <label for="formatting">Special Formatting (+₹80)</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="editing" name="editing">
+                                <label for="editing">Professional Editing (+₹120)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="instructions">Special Instructions</label>
+                        <textarea id="instructions" rows="3" placeholder="Any specific requirements or instructions for your assignment..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="calculator-result">
+                    <h3>Order Summary</h3>
+                    <div class="result-item">
+                        <span>Base Price (5 pages)</span>
+                        <span id="basePrice">₹40</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Urgency Multiplier (24hrs)</span>
+                        <span id="urgencyMultiplier">2x</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Location: Navi Mumbai</span>
+                        <span id="locationCharge">₹0</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Additional Services</span>
+                        <span id="additionalServices">₹0</span>
+                    </div>
+                    <div class="result-total">
+                        <span>Total Cost</span>
+                        <span id="totalCost">₹80</span>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity:0.9;">All prices are inclusive of GST</p>
+                    <button class="order-btn" id="placeOrderBtn">Place Order Now</button>
+                    <p style="margin-top: 1rem; font-size: 0.8rem; opacity:0.8; text-align:center;">*Login required to place order</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Comprehensive Services</h2>
+                <p>We provide end-to-end assignment solutions for students at all academic levels</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Academic Writing</h3>
+                    <p>Essays, research papers, term papers, and all academic writing needs with proper citations and formatting.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Programming Projects</h3>
+                    <p>Java, Python, C++, web development, app development, database projects and coding assignments.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Case Studies & Reports</h3>
+                    <p>Business case studies, market analysis reports, financial reports and management assignments.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Science & Engineering</h3>
+                    <p>Lab reports, engineering drawings, technical calculations, MATLAB, AutoCAD and simulation projects.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Urgent Delivery</h3>
+                    <p>24-hour turnaround for emergency assignments with quality assurance and plagiarism check.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>After-Sales Support</h3>
+                    <p>Unlimited revisions, direct communication with writers, and round-the-clock customer support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel (Hidden by default) -->
+    <section class="admin-panel" id="admin" style="display:none;">
+        <div class="container admin-container">
+            <div class="section-title">
+                <h2>Admin Dashboard</h2>
+                <p>User management and assignment order tracking</p>
+            </div>
+            
+            <div id="adminContent">
+                <h3>Registered Users</h3>
+                <table class="user-table" id="userTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Education</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- User data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+                
+                <h3 style="margin-top:3rem;">Recent Orders</h3>
+                <div id="ordersList">
+                    <!-- Order data will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Assignment Done</h3>
+                    <p>Your trusted partner for academic and professional assignment solutions. We deliver excellence with punctuality and precision.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, Navi Mumbai, Thane & Local Areas</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> support@assignmentdone.com</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#calculator">Price Calculator</a>
+                    <a href="#services">Our Services</a>
+                    <a href="#" id="footerLogin">Login/Register</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Delivery Areas</h3>
+                    <a>Mumbai - All Areas</a>
+                    <a>Navi Mumbai - All Sectors</a>
+                    <a>Thane - East & West</a>
+                    <a>Local Areas - Home Delivery</a>
+                    <a>Other Locations - On Request</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p style="margin-top:1.5rem;">Subscribe to our newsletter</p>
+                    <input type="email" placeholder="Your email" style="width:100%; padding:0.7rem; border-radius:4px; border:none; margin-top:0.5rem;">
+                    <button style="background-color:var(--primary); color:white; border:none; padding:0.7rem 1.5rem; border-radius:4px; margin-top:0.8rem; width:100%; cursor:pointer;">Subscribe</button>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Assignment Done. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeAuthModal">&times;</button>
+            
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="login">Login</button>
+                <button class="modal-tab" data-tab="register">Register</button>
+            </div>
+            
+            <div class="tab-content active" id="loginTab">
+                <h2>Login to Your Account</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    
+                    <div class="form-group" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div>
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" style="color:var(--primary); font-size:0.9rem;">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="order-btn" style="margin-top:1rem;">Login</button>
+                </form>
+                
+                <p style="text-align:center; margin-top:1.5rem; color:#666;">
+                    Demo Accounts:<br>
+                    User: user@example.com / password123<br>
+                    Admin: admin@assignmentdone.com / admin123
+                </p>
+            </div>
+            
+            <div class="tab-content" id="registerTab">
+                <h2>Create New Account</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regPhone">Phone Number</label>
+                        <input type="tel" id="regPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regEducation">Education Level</label>
+                        <select id="regEducation" required>
+                            <option value="">Select education level</option>
+                            <option value="school">School</option>
+                            <option value="college">College/Undergraduate</option>
+                            <option value="university">University/Postgraduate</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regLocation">Preferred Delivery Location</label>
+                        <select id="regLocation" required>
+                            <option value="">Select location</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="navi-mumbai">Navi Mumbai</option>
+                            <option value="thane">Thane</option>
+                            <option value="mumbai-local">Mumbai Local Areas</option>
+                            <option value="thane-local">Thane Local Areas</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="regTerms" required>
+                        <label for="regTerms">I agree to the Terms & Conditions and Privacy Policy</label>
+                    </div>
+                    
+                    <button type="submit" class="order-btn" style="margin-top:1rem;">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeOrderModal">&times;</button>
+            <div style="text-align:center;">
+                <i class="fas fa-check-circle" style="font-size:4rem; color:var(--success); margin-bottom:1rem;"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Your assignment order has been received.</p>
+                <div style="background-color:#f8f9fa; padding:1.5rem; border-radius:8px; margin:1.5rem 0;">
+                    <h3>Order Details</h3>
+                    <p id="orderDetails">Details will appear here</p>
+                </div>
+                <p>We'll contact you shortly for further details. You can track your order in your account dashboard.</p>
+                <button class="order-btn" id="closeOrderBtn" style="width:auto; padding:0.8rem 2rem;">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data Storage Simulation (Backend Simulation)
+        const mockDatabase = {
+            users: [
+                {
+                    id: 1,
+                    name: "Demo User",
+                    email: "user@example.com",
+                    phone: "9876543210",
+                    education: "college",
+                    location: "navi-mumbai",
+                    password: "password123",
+                    isAdmin: false,
+                    status: "active"
+                },
+                {
+                    id: 2,
+                    name: "Admin User",
+                    email: "admin@assignmentdone.com",
+                    phone: "9876500000",
+                    education: "professional",
+                    location: "mumbai",
+                    password: "admin123",
+                    isAdmin: true,
+                    status: "active"
+                }
+            ],
+            orders: [],
+            currentUser: null
+        };
+
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const loginBtn = document.getElementById('loginBtn');
+        const userAvatar = document.getElementById('userAvatar');
+        const authModal = document.getElementById('authModal');
+        const closeAuthModal = document.getElementById('closeAuthModal');
+        const modalTabs = document.querySelectorAll('.modal-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const urgencyOptions = document.querySelectorAll('.urgency-option');
+        const locationOptions = document.querySelectorAll('.location-option');
+        const decreasePagesBtn = document.getElementById('decreasePages');
+        const increasePagesBtn = document.getElementById('increasePages');
+        const pagesCountInput = document.getElementById('pagesCount');
+        const placeOrderBtn = document.getElementById('placeOrderBtn');
+        const orderModal = document.getElementById('orderModal');
+        const closeOrderModal = document.getElementById('closeOrderModal');
+        const closeOrderBtn = document.getElementById('closeOrderBtn');
+        const adminLink = document.getElementById('adminLink');
+        const adminSection = document.getElementById('admin');
+        const userTableBody = document.getElementById('userTableBody');
+        const footerLogin = document.getElementById('footerLogin');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUI();
+            calculatePrice();
+            renderUserTable();
+            
+            // Check if user is already logged in (from sessionStorage)
+            const savedUser = sessionStorage.getItem('assignmentDoneUser');
+            if (savedUser) {
+                mockDatabase.currentUser = JSON.parse(savedUser);
+                updateUI();
+            }
+        });
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+
+        // Auth Modal
+        loginBtn.addEventListener('click', function() {
+            if (mockDatabase.currentUser) {
+                // User is logged in, show logout option
+                if (confirm('Are you sure you want to logout?')) {
+                    mockDatabase.currentUser = null;
+                    sessionStorage.removeItem('assignmentDoneUser');
+                    updateUI();
+                }
+            } else {
+                authModal.style.display = 'flex';
+            }
+        });
+
+        footerLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            authModal.style.display = 'flex';
+        });
+
+        closeAuthModal.addEventListener('click', function() {
+            authModal.style.display = 'none';
+        });
+
+        // Modal Tabs
+        modalTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                modalTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabId + 'Tab') {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Login Form Submission
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Find user in mock database
+            const user = mockDatabase.users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                mockDatabase.currentUser = user;
+                sessionStorage.setItem('assignmentDoneUser', JSON.stringify(user));
+                
+                // Show success message
+                alert('Login successful! Welcome back, ' + user.name);
+                authModal.style.display = 'none';
+                updateUI();
+                loginForm.reset();
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        });
+
+        // Register Form Submission
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const education = document.getElementById('regEducation').value;
+            const location = document.getElementById('regLocation').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            // Validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // Check if user already exists
+            if (mockDatabase.users.find(u => u.email === email)) {
+                alert('An account with this email already exists. Please login instead.');
+                return;
+            }
+            
+            // Create new user
+            const newUser = {
+                id: mockDatabase.users.length + 1,
+                name: name,
+                email: email,
+                phone: phone,
+                education: education,
+                location: location,
+                password: password,
+                isAdmin: false,
+                status: 'active'
+            };
+            
+            // Add to database
+            mockDatabase.users.push(newUser);
+            
+            // Auto-login
+            mockDatabase.currentUser = newUser;
+            sessionStorage.setItem('assignmentDoneUser', JSON.stringify(newUser));
+            
+            // Show success message
+            alert('Registration successful! Welcome to Assignment Done.');
+            authModal.style.display = 'none';
+            updateUI();
+            renderUserTable();
+            registerForm.reset();
+            
+            // Switch to login tab for next time
+            modalTabs.forEach(t => t.classList.remove('active'));
+            document.querySelector('.modal-tab[data-tab="login"]').classList.add('active');
+            tabContents.forEach(content => content.classList.remove('active'));
+            document.getElementById('loginTab').classList.add('active');
+        });
+
+        // Urgency Selection
+        urgencyOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                urgencyOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                calculatePrice();
+            });
+        });
+
+        // Location Selection
+        locationOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                locationOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                const location = this.getAttribute('data-location');
+                const otherLocationContainer = document.getElementById('otherLocationContainer');
+                
+                if (location === 'other') {
+                    otherLocationContainer.style.display = 'block';
+                } else {
+                    otherLocationContainer.style.display = 'none';
+                }
+                
+                calculatePrice();
+            });
+        });
+
+        // Pages Count Control
+        decreasePagesBtn.addEventListener('click', function() {
+            let currentValue = parseInt(pagesCountInput.value);
+            if (currentValue > 1) {
+                pagesCountInput.value = currentValue - 1;
+                calculatePrice();
+            }
+        });
+
+        increasePagesBtn.addEventListener('click', function() {
+            let currentValue = parseInt(pagesCountInput.value);
+            pagesCountInput.value = currentValue + 1;
+            calculatePrice();
+        });
+
+        pagesCountInput.addEventListener('input', calculatePrice);
+
+        // Additional Services Checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', calculatePrice);
+        });
+
+        // Calculate Price Function
+        function calculatePrice() {
+            const pages = parseInt(pagesCountInput.value);
+            const selectedUrgency = document.querySelector('.urgency-option.selected');
+            const multiplier = parseFloat(selectedUrgency.getAttribute('data-multiplier'));
+            
+            // Base price calculation
+            const basePricePerPage = 8;
+            const basePrice = pages * basePricePerPage;
+            
+            // Apply urgency multiplier
+            const urgencyPrice = basePrice * multiplier;
+            
+            // Additional services
+            let additionalCost = 0;
+            if (document.getElementById('references').checked) additionalCost += 50;
+            if (document.getElementById('plagiarism').checked) additionalCost += 100;
+            if (document.getElementById('formatting').checked) additionalCost += 80;
+            if (document.getElementById('editing').checked) additionalCost += 120;
+            
+            // Location charge (free for main areas, ₹50 for local/other)
+            const selectedLocation = document.querySelector('.location-option.selected').getAttribute('data-location');
+            let locationCharge = 0;
+            if (selectedLocation.includes('local') || selectedLocation === 'other') {
+                locationCharge = 50;
+            }
+            
+            // Update display
+            document.getElementById('basePrice').textContent = `₹${basePrice}`;
+            document.getElementById('urgencyMultiplier').textContent = `${multiplier}x`;
+            document.getElementById('locationCharge').textContent = locationCharge > 0 ? `₹${locationCharge}` : 'Free';
+            document.getElementById('additionalServices').textContent = `₹${additionalCost}`;
+            
+            const totalCost = urgencyPrice + additionalCost + locationCharge;
+            document.getElementById('totalCost').textContent = `₹${totalCost}`;
+            
+            // Update location text
+            let locationText = selectedLocation.replace('-', ' ');
+            if (selectedLocation === 'other') {
+                const otherLocation = document.getElementById('otherLocation').value;
+                locationText = otherLocation || 'Other Location';
+            }
+            document.querySelector('#locationCharge').previousElementSibling.textContent = `Location: ${locationText}`;
+        }
+
+        // Place Order Button
+        placeOrderBtn.addEventListener('click', function() {
+            if (!mockDatabase.currentUser) {
+                alert('Please login to place an order.');
+                authModal.style.display = 'flex';
+                return;
+            }
+            
+            // Get order details
+            const pages = parseInt(pagesCountInput.value);
+            const urgency = document.querySelector('.urgency-option.selected').getAttribute('data-days');
+            const location = document.querySelector('.location-option.selected').getAttribute('data-location');
+            const assignmentType = document.getElementById('assignmentType').value;
+            const instructions = document.getElementById('instructions').value;
+            const totalCost = document.getElementById('totalCost').textContent;
+            
+            // Create order object
+            const order = {
+                id: mockDatabase.orders.length + 1,
+                userId: mockDatabase.currentUser.id,
+                userName: mockDatabase.currentUser.name,
+                pages: pages,
+                urgency: urgency + ' days',
+                location: location,
+                assignmentType: assignmentType,
+                instructions: instructions,
+                totalCost: totalCost,
+                status: 'pending',
+                date: new Date().toLocaleDateString()
+            };
+            
+            // Add to database
+            mockDatabase.orders.push(order);
+            
+            // Show order details in modal
+            document.getElementById('orderDetails').innerHTML = `
+                <p><strong>Order ID:</strong> #${order.id}</p>
+                <p><strong>Pages:</strong> ${pages}</p>
+                <p><strong>Delivery:</strong> ${urgency} days</p>
+                <p><strong>Location:</strong> ${location}</p>
+                <p><strong>Total Cost:</strong> ${totalCost}</p>
+            `;
+            
+            orderModal.style.display = 'flex';
+        });
+
+        // Close Order Modal
+        closeOrderModal.addEventListener('click', function() {
+            orderModal.style.display = 'none';
+        });
+
+        closeOrderBtn.addEventListener('click', function() {
+            orderModal.style.display = 'none';
+        });
+
+        // Update UI based on login state
+        function updateUI() {
+            const user = mockDatabase.currentUser;
+            
+            if (user) {
+                // User is logged in
+                loginBtn.textContent = 'Logout';
+                userAvatar.innerHTML = `<i class="fas fa-user-check"></i>`;
+                userAvatar.title = `Logged in as ${user.name}`;
+                
+                // Show admin link if user is admin
+                if (user.isAdmin) {
+                    adminLink.style.display = 'block';
+                } else {
+                    adminLink.style.display = 'none';
+                    adminSection.style.display = 'none';
+                }
+            } else {
+                // User is not logged in
+                loginBtn.textContent = 'Login / Register';
+                userAvatar.innerHTML = `<i class="fas fa-user"></i>`;
+                userAvatar.title = 'Click to login';
+                adminLink.style.display = 'none';
+                adminSection.style.display = 'none';
+            }
+        }
+
+        // Render User Table for Admin
+        function renderUserTable() {
+            userTableBody.innerHTML = '';
+            
+            mockDatabase.users.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.education}</td>
+                    <td>${user.location}</td>
+                    <td><span class="status-badge status-active">${user.status}</span></td>
+                `;
+                userTableBody.appendChild(row);
+            });
+        }
+
+        // Admin Link Click
+        adminLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (mockDatabase.currentUser && mockDatabase.currentUser.isAdmin) {
+                // Toggle admin section
+                if (adminSection.style.display === 'none' || adminSection.style.display === '') {
+                    adminSection.style.display = 'block';
+                    renderUserTable();
+                } else {
+                    adminSection.style.display = 'none';
+                }
+                
+                // Scroll to admin section
+                adminSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    mainNav.classList.remove('active');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === authModal) {
+                authModal.style.display = 'none';
+            }
+            if (e.target === orderModal) {
+                orderModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
